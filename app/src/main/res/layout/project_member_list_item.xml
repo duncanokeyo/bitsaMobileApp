@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dans.apps.bitsa.widget.ForegroundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:foreground="?selectableItemBackground"
+    android:background="#FFF"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="3"
+            android:layout_weight="1"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Okeyo duncan odhiambo" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            app:srcCompat="@drawable/more_vert_deep_blue" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:ellipsize="end"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:fontFamily="@font/opensanslight"
+        android:maxLines="3"
+        android:layout_weight="1"
+        android:textColor="@color/deep_blue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        tools:text="Role: Designer" />
+
+</com.dans.apps.bitsa.widget.ForegroundLinearLayout>

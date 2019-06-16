@@ -1,0 +1,28 @@
+-v1
+
+users who can contribute 
+1) students (bitsa officials)
+   -Students have two options. pay club fees (which is mandatory) or contribute to the club (not mandatory)
+2) visitors (teachers, alumni) (contribute to the club) 
+
+
+
+[payment and data capturing information workflow (contributions)]
+
+means of payments (mpesa)
+1) The user initiates the payment
+2) on our side,mpesa will return the results if successful or failed.. if failed we will show message to the user. (we will display success message only if
+we get a success message from the server. 
+3) mpesa calls the callback url in our server
+4) on the server, if payment wasnt successful, we display this error to the user .. if successful we go to step 5
+5) in step 5, we need to query for the user who paid this amount we are (interested in the email address,and the phone uid(updateable)). so we will query using the phone number(updateable field)..The email address will be used to store the transaction reference ...
+  -- we  
+6) we store this transaction in the database. we will store
+   
+   a) transaction reference
+   b) email address (identifies the person who paid the amount)
+   c) the amount paid
+   d) date of the transaction.
+   e) the phone number of the user.
+
+7) if we failed to get the user information. we will basically store the transaction reference, such as the email adderss ..

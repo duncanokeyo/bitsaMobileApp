@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/grey300</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeMpesa" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryMpesa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryMpesaDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/grey300</item>
+    </style>
+
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_drawable</item>
+    </style>
+
+    <style name="Login" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+
+    <style name="Theme.App.DialogActivity.LIGHT" parent="@style/Theme.MaterialComponents.Light.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">96%</item>
+        <item name="android:windowMinWidthMinor">96%</item>
+        <item name="android:windowBackground">@color/grey200</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <color name="colorPrimaryMpesa">@android:color/holo_green_light</color>
+    <color name="colorPrimaryMpesaDark">@android:color/holo_green_dark</color>
+</resources>

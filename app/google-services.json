@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "576216350139",
+    "firebase_url": "https://bitsa-8978e.firebaseio.com",
+    "project_id": "bitsa-8978e",
+    "storage_bucket": "bitsa-8978e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576216350139:android:ec57493dd1ee1f2e",
+        "android_client_info": {
+          "package_name": "com.dans.apps.bitsa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576216350139-85vmp5pd3to9otvcp5vdnb0of0sqenkg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dans.apps.bitsa",
+            "certificate_hash": "efb7d71e3b83e78284ee62f73886a3de494efc60"
+          }
+        },
+        {
+          "client_id": "576216350139-bn6msrli74doaje5rdvmqri9otf77ovc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm9cbDvxc1hdnmNoa6W8Zpb1o_ljZEAwI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576216350139-bn6msrli74doaje5rdvmqri9otf77ovc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#FFF"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="1"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="20th October 2018" />
+
+        <TextView
+            android:id="@+id/reference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="2"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Reference: NBA7RK1BDP" />
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="1"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Amount: 100ksh" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="end"
+            android:padding="7dp"
+            android:background="@drawable/border"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="3"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Semester: 2017/2018.1" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

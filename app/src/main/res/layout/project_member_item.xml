@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/name"
+        app:boxStrokeColor="@color/deep_blue"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/member_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <com.rilixtech.CountryCodePicker
+            android:id="@+id/country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:boxStrokeColor="@color/deep_blue"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/member_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/email"
+        app:boxStrokeColor="@color/deep_blue"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/member_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/member_role"
+        app:boxStrokeColor="@color/deep_blue"
+        app:boxStrokeWidth="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/member_role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/remove"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/remove"
+        app:cornerRadius="10dp"
+        app:rippleColor="@color/grey400"
+        app:strokeColor="@color/deep_blue"
+        app:strokeWidth="2dp" />
+
+
+</LinearLayout>

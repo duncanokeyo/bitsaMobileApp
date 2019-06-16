@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#FFF"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/opensanslight"
+                android:maxLines="3"
+                android:textColor="@color/deep_blue"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="Request to delete church app" />
+
+            <ImageView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                app:srcCompat="@drawable/more_vert_deep_blue" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey300" />
+
+        <com.dans.apps.bitsa.widget.ExpandableTextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:maxLines="6"
+            tools:text="I would really love to join  your church" />
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/opensanslight"
+            android:textColor="@color/deep_blue"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            tools:text="From Okeyo duncan odhiambo (Bitsa President)" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

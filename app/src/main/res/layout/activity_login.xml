@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/base"
+    android:background="#FFF"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensanslight"
+        android:text="@string/login_as"
+        android:textAllCaps="true"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/users_container"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/deep_blue"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/users_container"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="29dp"
+            app:rippleColor="@color/grey400"
+            android:id="@+id/student_card"
+            app:strokeColor="@color/deep_blue"
+            app:strokeWidth="2dp"
+            app:cardElevation="2dp"
+            android:layout_margin="8dp"
+            android:layout_height="70dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:textColor="@color/deep_blue"
+                android:layout_gravity="center"
+                android:text="@string/student"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="29dp"
+            android:layout_margin="8dp"
+            app:strokeWidth="2dp"
+            android:id="@+id/bitsa_official_card"
+            app:rippleColor="@color/grey400"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/deep_blue"
+            android:layout_height="70dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/deep_blue"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:text="@string/club_official"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:cardCornerRadius="29dp"
+            android:layout_margin="8dp"
+            app:strokeWidth="2dp"
+            android:id="@+id/visitor_card"
+            app:rippleColor="@color/grey400"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/deep_blue"
+            android:layout_height="70dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/deep_blue"
+                android:textAllCaps="true"
+                android:layout_gravity="center"
+                android:text="@string/visitor"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="122dp" />
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".NewAnnouncementActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:visibility="gone"
+        tools:text="Fetching user .." />
+
+
+
+    <ScrollView
+        android:id="@+id/payment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:visibility="visible"
+        tools:context=".NewAnnouncementActivity">
+
+        <LinearLayout
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/notice_view"
+                android:layout_width="match_parent"
+                android:background="#1E88E5"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#FFF"
+                        android:layout_weight="1"
+                        android:text="@string/notice"/>
+                    <ImageView
+                        android:id="@+id/close_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/close"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:text="@string/notice_update_phone"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:text="@string/notice_update_sim"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:text="@string/contact_us_for_help"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/dotted_border"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/opensanslight"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    tools:text="Name: okeyo duncan odhiambo" />
+
+                <TextView
+                    android:id="@+id/billing_email_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/opensanslight"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    tools:text="Billing email: okeyodan@gmail.com" />
+
+                <TextView
+                    android:id="@+id/phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/opensanslight"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    tools:text="Billing phone: 0791507732" />
+            </LinearLayout>
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group"
+                android:layout_width="wrap_content"
+                app:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                app:singleSelection="true"
+                app:checkedChip="@+id/club_fee_payment"
+                android:layout_height="wrap_content">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/contribution"
+                    android:layout_width="wrap_content"
+                    app:checkedIconEnabled="true"
+                    android:checkable="true"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contribution"/>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/club_fee_payment"
+                    android:layout_width="wrap_content"
+                    app:checkedIconEnabled="true"
+                    android:checkable="true"
+                    android:layout_height="wrap_content"
+                    app:chipStrokeColor="@color/colorPrimary"
+                    android:text="@string/club_payment"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:hint="@string/amount"
+                app:boxStrokeColor="?colorPrimaryDark"
+                app:boxStrokeWidth="2dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                android:text="@string/contribute"
+                app:cornerRadius="10dp"
+                app:rippleColor="@color/grey400"
+                app:strokeColor="?colorPrimaryDark"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
