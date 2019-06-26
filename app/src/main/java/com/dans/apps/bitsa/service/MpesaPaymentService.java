@@ -43,9 +43,7 @@ public class MpesaPaymentService extends Service implements ValueEventListener {
     private static String TAG = "MpesaPaymentService";
 
     OkHttpClient client = new OkHttpClient.Builder()
-            .connectTimeout(30, TimeUnit.SECONDS)/*.
-                    addInterceptor(new BasicAuthenticator("uWQyLuOTqsvVegRyLkbaTpOGzG0figF8",
-                            "ZxHo6Oym45i0fylN"))*/
+            .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS).build();
     private MediaType jsonMediaType = MediaType.parse("application/json;charset=utf-8");
     private MpesaPaymentDetails mpesaPaymentDetails;
@@ -152,8 +150,9 @@ public class MpesaPaymentService extends Service implements ValueEventListener {
     public void generateAccessToken(final User user,final String phoneNumber,
                                     final int amount, final int transactionType,
                                     final Semester semester){
-
-        final String credentials = Credentials.basic("uWQyLuOTqsvVegRyLkbaTpOGzG0figF8","ZxHo6Oym45i0fylN");
+        final String userName = ""; //et this information from the daraja console
+        final Strnig passWord = ""; //this too
+        final String credentials = Credentials.basic(userName,passWord);
         final Request request = new Request.Builder().url(Constants.MpesaEndPoints.AccessTokenGenerator).
                 addHeader("Authorization",credentials).build();
         client.newCall(request).enqueue(new Callback() {
